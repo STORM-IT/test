@@ -1,0 +1,133 @@
+@font-face {
+          font-family: shabnam;
+          src: url(Shabnam.ttf);
+}
+
+* {
+          font-family: shabnam;
+          margin: 0px;
+          padding: 0px;
+}
+body{
+          background-color: black;
+}
+.effect-blur{
+          background-image: url("pictur/img.jpg");
+          filter: blur(5px);
+          -webkit-filter: blur(5px);
+          height: 100%;
+          
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size:cover ;
+}
+#container {
+          background-color: rgba(0, 0, 0, 0.473);
+display: flex;
+          position: absolute;
+          top: 0px;
+          direction: rtl;
+justify-content:space-between;
+align-items: center;
+          width: 100%;
+}
+#logo{
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin: 7px;
+          display: inline-block;
+}
+.ul-menu {
+          /* background-color: rgba(0, 0, 0, 0.575); */
+
+          /* width: 100px;
+          height: 100px; */
+          display: inline-block;
+
+
+}
+
+.ul-menu>li {
+
+          float: right;
+          margin: 5px 10px;
+          list-style: none;
+          z-index: 2;
+          /* background-color: rgb(75, 109, 139); */
+
+}
+
+.link-navbar {
+          font-family: shabnam;
+          text-decoration: none;
+          color: rgba(223, 219, 219, 0.904);
+
+          font-size: 17px;
+}
+.link-navbar:hover{
+          color: rgb(238, 228, 228);
+}
+.icone-more {
+
+          
+          margin-right: 3px;
+          position: relative;
+          top: 2px;
+          /* display: inline-block; */
+animation:forwards  icon-more-bottom 1s;
+}
+
+.icone-more:hover {
+          animation:forwards  icon-more-top 1s;
+
+}
+
+@keyframes icon-more-top {
+          0% {
+                    transform: rotate(0deg);
+          }
+
+          100% {
+                    transform: rotate(180deg);
+          }
+}
+
+@keyframes icon-more-bottom {
+          0% {
+                    transform: rotate(180deg);
+          }
+
+          100% {
+                    transform: rotate(0deg);
+          }
+}
+.search-box{
+          background-color: rgba(37, 41, 44, 0.753);
+          margin-left: 30px;
+          padding: 5px;
+          width: 15vw;
+          height: max-content;
+          
+}
+#input-search{
+          
+       display: block;
+       border-radius: 3px;
+       border: none;
+       width: 100%;
+       color: rgb(190, 206, 211);
+       background-color: rgba(0, 0, 0, 0);
+       
+}
+#btn-search{
+          background-color: rgb(136, 42, 42);
+          border: none;
+          
+          float: right;
+          height: 20px;
+          width: 20px;
+          font-size: 16px;
+          /* height: 30px;
+          width: 30px; */
+}
