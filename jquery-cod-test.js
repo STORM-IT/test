@@ -1,46 +1,70 @@
   $(document).ready(function () {
-    $(".ul-menu li").hover(function (e) {
+
+    var close = false;
+    $(".ul-menu li").mouseenter(function () {
       let id = $(this).attr('id');
+
       var ul;
       switch (id) {
         case "Foreign":
           ul = document.getElementById("list-nav-film-Foreign");
-          // alert(ul);
-
-          $(ul).stop().slideDown(600);
-          
+          $(ul).stop().fadeIn(200);
           $(ul).hover(function () {
-              // over
-              console.log("22");
-              $(ul).stop().slideDown(600);
+              close=true;
             }, function () {
-              // out
-              console.log("33");
-               $(ul).stop().slideUp(600);
+              close=false;
+              $(ul).fadeOut(300);
             }
           );
-          
-          
           break;
         case "parsian":
-
+          ul = document.getElementById("list-nav-film-parsian");
+          $(ul).stop().fadeIn(200);
+          $(ul).hover(function () {
+              close=true;
+            }, function () {
+              close=false;
+              $(ul).fadeOut(300);
+            }
+          );
           break;
         case "Bests":
-
+          ul = document.getElementById("list-nav-film-Bests");
+          $(ul).stop().fadeIn(200);
+          $(ul).hover(function () {
+              close=true;
+            }, function () {
+              close=false;
+              $(ul).fadeOut(300);
+            }
+          );
           break;
         case "years":
-
+          ul = document.getElementById("list-nav-film-years");
+          $(ul).stop().fadeIn(200);
+          $(ul).hover(function () {
+              close=true;
+            }, function () {
+              close=false;
+              $(ul).fadeOut(300);
+            }
+          );
           break;
 
         default:
           break;
       }
+    });
 
-    }, function () {
-      $("#list-nav-film-Foreign").stop().slideUp(500);
-      //$(".ul-menu ul").stop().slideUp(500);
-      console.log("11");
-      // out
+
+    $(".ul-menu li").mouseleave(function () {
+
+      if (close === false) {
+        
+        $(".ul-menu ul").fadeOut(300);
+        //$(".ul-menu ul").slideUp(500);
+      }
+      
     });
 
   });
